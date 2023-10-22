@@ -9,7 +9,7 @@ pageEncoding="UTF-8"%>
     <%@include file="component/allcss.jsp"%>
   </head>
 
-  <body>
+   <body>
     <%@include file="component/navbar.jsp"%>
 
     <div class="doctor-login container flex">
@@ -18,11 +18,11 @@ pageEncoding="UTF-8"%>
           <h2>Doctor Login</h2>
 
           <c:if test="${not empty errorMsg}">
-            <p>${errorMsg}</p>
+            <p class="errMsg">${errorMsg}</p>
             <c:remove var="errorMsg" scope="session" />
           </c:if>
           <c:if test="${not empty sucMsg}">
-            <div>${sucMsg}</div>
+            <div><p class="sucMsg">${sucMsg}</p></div>
             <c:remove var="sucMsg" scope="session" />
           </c:if>
 

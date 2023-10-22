@@ -14,86 +14,74 @@
 <meta charset="UTF-8">
 <title>VT HOSPITAL</title>
 
-<%@include file="../component/allcss.jsp"%>
-<style type="text/css">
-.paint-card {
-	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
-}
+<link href="../css/style.css" rel="stylesheet">
+<script src="https://kit.fontawesome.com/ab91f51c07.js"
+	crossorigin="anonymous"></script>
 </style>
 </head>
 <body>
 	<%@include file="navbar.jsp"%>
-	<div class="container-fluid p-3">
+	<div class="container">
 		<div class="row">
 			<c:if test="${not empty errorMsg}">
-				<p class="fs-3 text-center text-danger">${errorMsg}</p>
+				<p class="errMsg">${errorMsg}</p>
 				<c:remove var="errorMsg" scope="session" />
 
 			</c:if>
 			<c:if test="${not empty sucMsg}">
-				<div class="fs-3 text-center text-warning">${sucMsg}</div>
+				<div class="sucMsg">${sucMsg}</div>
 				<c:remove var="sucMsg" scope="session" />
 			</c:if>
 
-			<div class="col-md-12">
-				<div class="card paint-card">
-					<div class="card-body">
-						<div class="fs-3 text-center">Doctor Details</div>
-						<table class="table">
-							<thead>
-								<tr>
-									<th scope="col">Full Name</th>
-									<th scope="col">DOB</th>
-									<th scope="col">Qualification</th>
-									<th scope="col">Specialist</th>
-									<th scope="col">Email</th>
-									<th scope="col">Mob No</th>
-									<th scope="col">Action</th>
-								</tr>
-							</thead>
-							<element>
-							<tbody>
-								<%
-										DoctorDao dao2 =new
-										DoctorDao(DBconnect.getConn());
-										List<Doctor> list2 =
-										dao2.getAllDoctor(); for(Doctor
-										d: list2) {
-									%>
-								<tr>
-									<td><%=
-												d.getFullName()
-											%></td>
-									<td><%=
-												d.getDob()
-											%></td>
-									<td><%=
-												d.getQualification()
-											%></td>
-									<td><%=
-												d.getSpecialist()
-											%></td>
-									<td><%=
-												d.getEmail()
-											%></td>
-									<td><%=
-												d.getMobNo()
-											%></td>
-									<td><a href="edit_doctor.jsp?id=<%=d.getId()%>"
-										class="btn btn-sm btn-warning"> Edit </a> <a
-										href="../deleteDoctor?id=<%=d.getId()%>"
-										class="btn btn-sm btn-danger"> Delete </a></td>
-								</tr>
-								<%}%>
 
-							</tbody>
-							</element>
-						</table>
+			<div class="card paint-card">
+				<div class="">
+					<div class="patient-details-table">
+						<h2>Doctor Details</h2>
 					</div>
+					<table class="table">
+						<thead>
+							<tr>
+								<th scope="col">Full Name</th>
+								<th scope="col">DOB</th>
+								<th scope="col">Qualification</th>
+								<th scope="col">Specialist</th>
+								<th scope="col">Email</th>
+								<th scope="col">Mob No</th>
+								<th scope="col">Action</th>
+							</tr>
+						</thead>
+						<element>
+						<tbody>
+							<%
+							DoctorDao dao2 = new DoctorDao(DBconnect.getConn());
+							List<Doctor> list2 = dao2.getAllDoctor();
+							for (Doctor d : list2) {
+							%>
+							<tr>
+								<td><%=d.getFullName()%></td>
+								<td><%=d.getDob()%></td>
+								<td><%=d.getQualification()%></td>
+								<td><%=d.getSpecialist()%></td>
+								<td><%=d.getEmail()%></td>
+								<td><%=d.getMobNo()%></td>
+								<td><a href="edit_doctor.jsp?id=<%=d.getId()%>"
+									class="btn btn-sm btn-warning"> Edit </a> <a
+									href="../deleteDoctor?id=<%=d.getId()%>"
+									class="btn btn-sm btn-danger"> Delete </a></td>
+							</tr>
+							<%
+							}
+							%>
+
+						</tbody>
+						</element>
+					</table>
 				</div>
 			</div>
+
 		</div>
 	</div>
-
+	<%@include file="../component/footer.jsp"%>
 </body>
 </html>

@@ -11,20 +11,18 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>VT HOSPITAL</title>
-<%@include file="../component/allcss.jsp"%>
-<style type="text/css">
-.paint-card {
-	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
-}
-</style>
+<link href="../css/style.css" rel="stylesheet">
+  <script
+      src="https://kit.fontawesome.com/ab91f51c07.js"
+      crossorigin="anonymous"
+    ></script>
 </head>
 <body>
 	<%@include file="navbar.jsp"%>
-	<div class="col-md-12">
-		<div class="card paint-card">
-			<div class="card-body">
-				<p class="fs-3 text-center">Patient Details</p>
-				<table class="table">
+	
+			<div class="patient-details-table container">
+				<h2 >Patient Details</h2>
+				<table class="table container">
 					<thead>
 						<tr>
 							<th scope="col">Full Name</th>
@@ -57,7 +55,7 @@
 							<td><%=ap.getDiseases()%></td>
 							<td><%=d.getFullName()%></td>
 							<td><%=ap.getAddress()%></td>
-							<td><%=ap.getStatus()%></td>
+							<td class="status-report"><%=ap.getStatus()%></td>
 						</tr>
 						<%
 						}
@@ -68,8 +66,7 @@
 				</table>
 
 			</div>
-		</div>
-	</div>
+
 	<%@include file="../component/footer.jsp"%>
 </body>
 </html>

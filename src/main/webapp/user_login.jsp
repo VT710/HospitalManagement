@@ -17,12 +17,12 @@ uri="http://java.sun.com/jsp/jstl/core"%> <%@page isELIgnored="false"%>
           <h2>User Login</h2>
 
           <c:if test="${not empty sucMsg}">
-            <p>${sucMsg}</p>
+            <p class="sucMsg">${sucMsg}</p>
             <c:remove var="sucMsg" scope="session" />
           </c:if>
 
           <c:if test="${not empty errorMsg}">
-            <p>${errorMsg}</p>
+            <p class="errMsg">${errorMsg}</p>
             <c:remove var="errorMsg" scope="session" />
           </c:if>
 

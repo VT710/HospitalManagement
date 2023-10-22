@@ -15,6 +15,8 @@
     --secondary-text-color: #3b3939;
     --style-color: #ee2828;
     --primary-text2-color: #1a1717;
+    --primary-svg-color: #0e1ece;
+    --white-color: #ffffff;
 }
 a{
     text-decoration: none;
@@ -58,6 +60,7 @@ h1,h2,h3{
 .navbar-expand{
     width: 90%;
     justify-content: space-between;
+    padding: 5px 0;
 }
 .navbar-expand i{
     color: var(--style-color);
@@ -74,12 +77,14 @@ h1,h2,h3{
     display: inline-block;
     position: relative;
 }
+
 .nav-item a{
-    padding: 1rem;
+    padding: 10px 16px;
     display: block;
 }
 .nav-item a:hover{
 color: var(--style-color);
+box-shadow: 1px 1px 5px var( --secondary-dark-color);
 }
 .dropdown-menu li{
     display: block;
@@ -103,6 +108,15 @@ color: var(--style-color);
 
 .dropdown-menu:hover .dropdown-menu{
     display: block;
+}
+.logout-btn{
+	    color: black;
+    font-size: 16px;
+    font-weight: 700;
+    border: 2px solid var(--secondary-dark-color);
+    padding: 2px 6px;
+    border-radius: 6px;
+    cursor: pointer;
 }
 
 
@@ -199,7 +213,7 @@ color: var(--style-color);
 }
 
 .card-body:hover{
-    transform: scale(101%);
+    box-shadow: 5px 5px 10px var(--secondary-dark-color);
     transition: 0.5s ease;
 }
 .card-image{
@@ -271,7 +285,7 @@ admin login page
 --------------------------------------------------------------------*/
 .admin-login{
     justify-content: center;
-    margin: 60px auto;
+    margin: 80px auto;
 
 
 }
@@ -299,13 +313,25 @@ admin login page
     width: 100%;
     height: 30px;
     padding: 0 10px;
-    border-radius: 20px;
+    border-radius: 6px;
+    border: 1px solid var(--secondary-dark-color);
+    font-size: 18px;
+
+  
    
+}
+.form-control:hover{
+    box-shadow: 1px 1px 5px var(--secondary-dark-color);
+}
+
+.form-control:focus{
+    font-size: 18px;
+    outline: none;
 }
 .form-submit-button{
     width: 100%;
     height: 30px;
-    border-radius: 20px;
+    border-radius: 6px;
   
     font-size: 16px;
     font-family: "poppins", sans-serif;
@@ -318,7 +344,7 @@ admin login page
 }
 
 .card-body p{
-    color: var(--secondary-dark-color);
+    
     text-align: center;
     
 }
@@ -391,12 +417,6 @@ admin login page ends
 
 
 /* .....................change Password start */
-
-
-
-
-
-
 
 
 /* --------------------------------
@@ -489,3 +509,257 @@ line-height: 1.6rem;
 footer page starts
 
 --------------------------------*/
+
+/* ..................user appointment start............... */
+.appointment{
+    width: 70%;
+    margin: 80px auto;
+}
+.appointment-body{
+    justify-content: space-between;
+  
+}
+.appointment-card{
+    width: 600px;
+   
+}
+.appointment-card h2{
+    margin-bottom: 20px;
+}
+
+.appointment-form-submit{
+justify-content: space-between;
+flex-wrap: wrap;
+width: 100%;
+}
+
+.appointment-input{
+    
+    width: 48%;
+    margin-bottom: 20px;
+}
+.app-textarea {
+    width: 100%;
+    
+}
+.app-textarea textarea{
+    height: 100px;
+    padding: 1rem;
+    font-size: 20px;
+}
+.appointment-image img{
+border-radius: 20px;
+width: 450px;
+height: 580px;
+}
+.anchor-btn{
+	text-align: center;
+	background-color: white;
+	border: 1px solid black;
+}
+
+@media (max-width: 767px){
+    .appointment-body{
+        display: block;
+    }
+}
+
+/* ..................user appointment start............... */
+
+
+/* .....................table appointment.................... */
+.appointment-heading{
+    margin: 80px auto;
+}
+.appointment-heading h2{
+text-align: center;
+}
+.appointment-card{
+    
+    width: 100%;
+}
+
+.table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 80px;
+}
+.table td, .table th{
+    padding: 12px 15px;
+    border: 1px solid var(--primary-text-color);
+    text-align: center;
+}
+
+.table th{
+    background-color: var(--secondary-dark-color);
+}
+.table tbody tr:nth-child(even){
+    background-color: var(--primary-bg-color);
+}
+
+
+
+@media (max-width: 767px){
+    .table thead{
+        display: none;
+    }
+    .table,  .table td, .table tr, table td{
+        display: block;
+        width:100%;
+    }
+    .table tr{
+        margin-bottom: 15px;
+
+    }
+    .table td{
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+    .table td::before{
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        font-size: 15px;
+        font-weight: bold;
+        text-align: left;
+
+    }
+
+}
+/* .....................table appointment.................... */
+
+
+/* ...................admin dashboard................. */
+
+.admin-dashboard{
+    margin: 80px auto;
+}
+.admin-dashboard h2{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.admin-card{
+    flex-wrap: wrap;
+    justify-content: space-around;
+   
+    padding: 20px;
+
+}
+.a-card{
+    width: 250px;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    border: 2px solid var(--secondary-dark-color);
+    background-color: var(--secondary-bg-color);
+    padding: 5px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px var(--primary-svg-color);
+}
+.a-card:hover{
+    background-color: var(--secondary-dark-color);
+}
+.a-card i{
+    color: var(--primary-svg-color);
+}
+
+.a-card p{
+color: var(--primary-text-color);
+font-size: large;
+font-weight: 1000;
+border-radius: 50%;
+background-color: var(--white-color);
+padding: 5px;
+cursor: pointer;
+}
+
+.card-form{
+   
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 80px !important;
+    
+    
+}
+add-specialist-form{
+	margin-bottom: 80px;
+}
+.specialist-add label{
+   font-size: medium;
+    display: block;
+    font-weight: 600;
+    padding-left: 10px;
+}
+.specialist-add input{
+margin: 20px 0;
+}
+.text-spe{
+    text-align: center;
+    margin-bottom: 20px;
+}
+/* ...................admin dashboard................. */
+
+/* ........admin doctor details...... */
+.admin-doctor{
+    justify-content: center;
+}
+.d-width{
+    width: 500px;
+    margin: 80px auto;
+}
+
+.errMsg{
+color: var(--style-color);
+font-size: 20px;
+font-weight: 600;
+text-align: center;
+
+}
+.sucMsg{
+    color: var(--primary-svg-color);
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+}
+/* ........admin doctor details...... */
+
+
+.patient-details-table h2{
+	margin-top: 40px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+.status-report{
+	color: var( --primary-svg-color);
+	font-weight: 700;
+}
+.comment-btn{
+	background-color: var( --secondary-bg-color);
+	padding: 5px;
+	border-radius: 10px;
+	color: var( --primary-svg-color);
+	
+}
+.comment-btn-disabled{
+	background-color: var( --secondary-bg-color);
+	padding: 5px;
+	border-radius: 6px;
+	
+	
+}
+.comment-btn-disabled i{
+	color: red;
+}
+.comment-btn-disabled:hover{
+	color: red;
+
+	}
+	
+	/* ..........doctor edit start */
+	
+	/* ..........doctor edit start */
+	

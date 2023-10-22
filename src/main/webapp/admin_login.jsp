@@ -12,7 +12,7 @@
    
     <%@include file="component/allcss.jsp"%>
   </head>
-  <body>
+   <body>
     <%@include file="component/navbar.jsp"%>
 
     <div class="admin-login container flex">
@@ -20,13 +20,13 @@
         <h2>Admin Login</h2>
 
         <c:if test="${not empty sucMsg}">
-        <p class="text-center text-warning fs-3">${sucMsg}</p>
-        <c:remove var="sucMsg" scope="session" />
+          <p class="sucMsg">${sucMsg}</p>
+          <c:remove var="sucMsg" scope="session" />
         </c:if>
 
         <c:if test="${not empty errorMsg}">
-        <p class="text-center text-danger fs-5">${errorMsg}</p>
-        <c:remove var="errorMsg" scope="session" />
+          <p class="errMsg">${errorMsg}</p>
+          <c:remove var="errorMsg" scope="session" />
         </c:if>
 
         <form action="adminlogin" method="post">

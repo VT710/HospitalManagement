@@ -11,12 +11,11 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>VT HOSPITAL</title>
-<style type="text/css">
-.paint-card {
-	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
-}
-</style>
-<%@include file="../component/allcss.jsp"%>
+<link href="../css/style.css" rel="stylesheet">
+  <script
+      src="https://kit.fontawesome.com/ab91f51c07.js"
+      crossorigin="anonymous"
+    ></script>
 </head>
 <body>
 	<c:if test="${empty doctObj }">

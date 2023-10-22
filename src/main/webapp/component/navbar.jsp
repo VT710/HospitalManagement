@@ -54,8 +54,8 @@
 
               <li class="nav-item">
                 <a href="#"
-                  ><button>
-                    <i class="fa-solid fa-circle-user"></i>${userObj.fullName}
+                  ><button class="user-display logout-btn">
+                    <i class="fa-solid fa-circle-user"></i>${userObj.fullName.toUpperCase()}
                   </button></a
                 >
                 <ul class="dropdown-menu">
