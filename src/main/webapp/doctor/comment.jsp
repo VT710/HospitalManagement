@@ -11,26 +11,22 @@
 <meta charset="ISO-8859-1">
 <title>VT HOSPITAL</title>
 <link href="../css/style.css" rel="stylesheet">
-  <script
-      src="https://kit.fontawesome.com/ab91f51c07.js"
-      crossorigin="anonymous"
-    ></script>
+<script src="https://kit.fontawesome.com/ab91f51c07.js"
+	crossorigin="anonymous"></script>
 </head>
 <body>
 	<c:if test="${empty doctObj }">
 		<c:redirect url="../doctor_login.jsp"></c:redirect>
 	</c:if>
-
-
 	<%@include file="navbar.jsp"%>
-	
+
 	<div class="comment container">
 		<div class="row">
 
-			<div class="col-md-6 offset-md-3">
-				<div class="card flex">
-					<div class="card-body">
-						<h2>Patient Comment</h2>
+			<div class="doctor-login container flex">
+				<div class="doctor-login-body">
+					<div class="card-body card-body-doctor">
+						<h2>Patient Analysis Comment</h2>
 
 						<%
 						int id = Integer.parseInt(request.getParameter("id"));
@@ -38,39 +34,39 @@
 
 						Appointment ap = dao.getAppointmentById(id);
 						%>
-						<form class="row" action="../updateStatus" method="post">
+						<form action="../updateStatus" method="post">
 							<div class="col-md-6">
-								<label>Patient Name</label> <input type="text" readonly
+								<label class="form-label">Patient Name</label> <input type="text" readonly
 									value="<%=ap.getFullName()%>" class="form-control">
 							</div>
 
-							<div class="col-md-6">
-								<label>Age</label> <input type="text" value="<%=ap.getAge()%>"
+							<div >
+								<label class="form-label">Age</label> <input type="text" value="<%=ap.getAge()%>"
 									readonly class="form-control">
 							</div>
 
 
-							<div class="col-md-6">
-								<br> <label>Mob No</label> <input type="text" readonly
+							<div >
+								<br> <label class="form-label">Mob No</label> <input type="text" readonly
 									value="<%=ap.getPhNo()%>" class="form-control">
 							</div>
 
-							<div class="col-md-6">
-								<br> <label>Diseases</label> <input type="text" readonly
+							<div >
+								<br> <label class="form-label">Diseases</label> <input type="text" readonly
 									value="<%=ap.getDiseases()%>" class="form-control">
 							</div>
 
-							<div class="col-md-12">
-								<br> <label>Comment</label>
-								<textarea required name="comm" class="form-control" row="3"
-									cols=""></textarea>
+							<div >
+								<br> <label class="form-label">Comment</label>
+								<textarea required name="comm" class="form-control" 
+									></textarea>
 							</div>
 
 							<input type="hidden" name="id" value="<%=ap.getId()%>"> <input
 								type="hidden" name="did" value="<%=ap.getDoctorId()%>">
 
 							<button
-								class=" mt-3 btn btn-outline-warning col-md-6 offset-md-3">Submit</button>
+								class="form-submit-button">Submit</button>
 
 						</form>
 

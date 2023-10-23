@@ -512,16 +512,26 @@ footer page starts
 
 /* ..................user appointment start............... */
 .appointment{
-    width: 70%;
     margin: 80px auto;
+}
+
+.appointment-space{
+	
+	
 }
 .appointment-body{
     justify-content: space-between;
+    flex-wrap: wrap;
   
 }
 .appointment-card{
     width: 600px;
    
+}
+.appointment-image img{
+border-radius: 20px;
+width: 400px;
+height: 580px;
 }
 .appointment-card h2{
     margin-bottom: 20px;
@@ -547,11 +557,7 @@ width: 100%;
     padding: 1rem;
     font-size: 20px;
 }
-.appointment-image img{
-border-radius: 20px;
-width: 450px;
-height: 580px;
-}
+
 .anchor-btn{
 	text-align: center;
 	background-color: white;
@@ -574,15 +580,16 @@ height: 580px;
 .appointment-heading h2{
 text-align: center;
 }
-.appointment-card{
+.appointment-table-card{
     
     width: 100%;
 }
 
 .table{
-    width: 100%;
+    width: 75%;
     border-collapse: collapse;
     margin-bottom: 80px;
+    font-size:15px;
 }
 .table td, .table th{
     padding: 12px 15px;
@@ -606,6 +613,7 @@ text-align: center;
     .table,  .table td, .table tr, table td{
         display: block;
         width:100%;
+        font-size:2rem;
     }
     .table tr{
         margin-bottom: 15px;
@@ -665,6 +673,10 @@ text-align: center;
 }
 .a-card i{
     color: var(--primary-svg-color);
+}
+
+.a-card i:hover{
+    color: var(--style-color);
 }
 
 .a-card p{
@@ -758,6 +770,30 @@ text-align: center;
 	color: red;
 
 	}
+	
+	.doc-edit{
+	color: white;
+	padding: 5px;
+	background-color: var( --primary-svg-color);
+	border-radius: 10px 0 0 0px;
+	font-weight: 600;
+	}
+	.doc-edit:hover{
+	background-color: var( --secondary-dark-color);
+	color: black;
+	}
+	.doc-delete{
+	color: red;
+	padding: 5px;
+	background-color: var( --secondary-bg-color);
+	  border-radius: 0px 0 10px 0;
+    font-weight: 600;
+	}
+	.doc-delete:hover{
+	background-color: var( --primary-svg-color);
+	color: white;
+	}
+	
 	
 	/* ..........doctor edit start */
 	

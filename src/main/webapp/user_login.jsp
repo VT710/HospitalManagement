@@ -14,7 +14,7 @@ uri="http://java.sun.com/jsp/jstl/core"%> <%@page isELIgnored="false"%>
     <div class="user-login-css container flex">
       <div class="user-login-body">
         <div class="card-body card-body-login">
-          <h2>User Login</h2>
+          <h2>Patient Login</h2>
 
           <c:if test="${not empty sucMsg}">
             <p class="sucMsg">${sucMsg}</p>

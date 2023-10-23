@@ -17,7 +17,7 @@
 <link href="../css/style.css" rel="stylesheet">
 <script src="https://kit.fontawesome.com/ab91f51c07.js"
 	crossorigin="anonymous"></script>
-</style>
+
 </head>
 <body>
 	<%@include file="navbar.jsp"%>
@@ -66,9 +66,9 @@
 								<td><%=d.getEmail()%></td>
 								<td><%=d.getMobNo()%></td>
 								<td><a href="edit_doctor.jsp?id=<%=d.getId()%>"
-									class="btn btn-sm btn-warning"> Edit </a> <a
+									class="doc-edit"> Edit </a> <a
 									href="../deleteDoctor?id=<%=d.getId()%>"
-									class="btn btn-sm btn-danger"> Delete </a></td>
+									class="doc-delete"> Delete </a></td>
 							</tr>
 							<%
 							}

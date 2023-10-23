@@ -29,7 +29,7 @@ pageEncoding="UTF-8"%>
           <form action="doctorLogin" method="post">
             <div class="mb-3">
               <div>
-                <label for="email" class="form-label">Email adress</label>
+                <label for="email" class="form-label">Email address</label>
                 <input
                   id="email"
                   type="email"
