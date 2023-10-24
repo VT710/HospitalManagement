@@ -1,4 +1,4 @@
-<%@include file="allcss.jsp"%>
+
  <div class="footer-main">
       <div class="footer-section">
         <div class="footer-sub-section flex container">

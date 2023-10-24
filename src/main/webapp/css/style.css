@@ -51,6 +51,7 @@ h1,h2,h3{
 /* navbar start */
 .navbar{
     width: 100%;
+    height: 60px;
     background-color: var(--secondary-bg-color);
  
     font-family: 'Poppins', sans-serif;
@@ -72,10 +73,75 @@ h1,h2,h3{
 }
 
 
+#mob-bar{
+    display: none;
+}
+.menu-btn{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    display: none;
+}
+#mob-bar:checked ~ .menu-btn i:before{
+    content: "\f00d";
+  }
+
+  #mob-bar:checked ~ ul{
+    position: absolute;
+    right: 0;
+    top: 60px;
+    z-index: 10;
+    transition: all 0.5s ease;
+    background-color: #13c4d846;
+    height: 100vh;
+    display: inline-block;
+  
+  }
+  #mob-bar:checked ~ ul li{
+    display: block;
+    position: relative;
+    text-align: start;
+    
+  }
+
+  @media (max-width:700px)
+  {
+    .menu-btn{
+        display: block;
+    }
+    .navbar-nav{
+        display: none;
+    }
+  }
+  @media (max-width:400px)
+  {
+    .menu-btn{
+        display: block;
+    }
+    .navbar-nav{
+        display: none;
+    }
+  }
+  
+  
+
+
+
+
 .nav-item{
     margin: 0 6px;
     display: inline-block;
     position: relative;
+}
+
+@media (max-width: 1024px) {
+    .nav-item {
+       
+        display: inline-block;
+        position: relative;
+        font-size: 10px;
+    }
 }
 
 .nav-item a{
@@ -118,6 +184,70 @@ box-shadow: 1px 1px 5px var( --secondary-dark-color);
     border-radius: 6px;
     cursor: pointer;
 }
+
+@media(max-width:789px){
+    .header-text-text{
+        font-size: 1.5rem !important;
+    }
+    .header-color{
+        font-size: 2rem !important;
+    }
+
+    .side-image {
+       
+        display: none;
+    }
+    .key-points {
+        width: 100% !important;
+        flex-wrap: wrap;
+        gap: 40px;
+        justify-content: space-evenly;
+    }
+}
+
+
+@media(max-width:768px){
+    .header-text-text{
+        font-size: 1.5rem !important;
+    }
+    .header-color{
+        font-size: 2rem !important;
+    }
+
+    .side-image {
+       
+        display: none;
+    }
+    .key-points {
+        width: 100% !important;
+        flex-wrap: wrap;
+        gap: 40px;
+        justify-content: space-evenly;
+    }
+}
+@media(max-width:425px){
+    .header-text-text{
+        font-size: 1.2rem !important;
+    }
+    .header-color{
+        font-size: 1.6rem !important;
+    }
+    .card-section {
+        display: flex;
+        justify-content: center !important;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+}
+@media(max-width:435px){
+    .header-text-text{
+        font-size: 1.3rem !important;
+    }
+    .header-color{
+        font-size: 1.7rem !important;
+    }
+}
+
 
 
 /* navbar end */
@@ -201,6 +331,7 @@ box-shadow: 1px 1px 5px var( --secondary-dark-color);
     display: flex;
     justify-content: space-between;
     gap: 10px;
+    flex-wrap: wrap;
     
     
 }
@@ -293,8 +424,27 @@ admin login page
     width: 450px;
 }
 .card-body{
+    width: 24% ;
     padding: 20px;
     background-color: var(--secondary-bg-color);
+}
+
+
+@media (max-width:425px){
+    .card-body {
+        width: 100% !important;
+        padding: 1px;
+        background-color: var(--secondary-bg-color);
+    }
+  
+}
+@media (max-width:430px){
+    .card-body {
+        width: 100% !important;
+        padding: 1px;
+        background-color: var(--secondary-bg-color);
+    }
+  
 }
 
 .card-body h2{
@@ -515,10 +665,7 @@ footer page starts
     margin: 80px auto;
 }
 
-.appointment-space{
-	
-	
-}
+
 .appointment-body{
     justify-content: space-between;
     flex-wrap: wrap;
@@ -568,8 +715,20 @@ width: 100%;
     .appointment-body{
         display: block;
     }
-}
+    .appointment-image img{
+        display: none;
+    }
 
+}
+@media screen and (max-width: 700px) {
+    /* Your CSS styles for screens up to and including 700px in width go here */
+   .appointment-image img{
+        display: none;
+    }
+    .appointment-imag{
+        display: none;
+    }
+}
 /* ..................user appointment start............... */
 
 
@@ -610,7 +769,7 @@ text-align: center;
     .table thead{
         display: none;
     }
-    .table,  .table td, .table tr, table td{
+    .table,  .table td, .table tr{
         display: block;
         width:100%;
         font-size:2rem;

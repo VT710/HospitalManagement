@@ -6,6 +6,7 @@ uri="http://java.sun.com/jsp/jstl/core"%> <%@page isELIgnored="false"%>
 <html>
   <head>
     <meta charset="ISO-8859-1" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VT HOSPITAL</title>
     <link href="../css/style.css" rel="stylesheet" />
     <script

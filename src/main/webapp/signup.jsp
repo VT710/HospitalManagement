@@ -5,6 +5,7 @@ uri="http://java.sun.com/jsp/jstl/core"%> <%@page isELIgnored="false"%>
 <html>
   <head>
     <meta charset="UTF-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VT HOSPITAL</title>
     <%@include file="component/allcss.jsp"%>
   </head>
@@ -35,6 +36,16 @@ uri="http://java.sun.com/jsp/jstl/core"%> <%@page isELIgnored="false"%>
                   name="fullName"
                   class="form-control"
                 />
+                <span
+                  id="nameAlert"
+                  style="
+                    color: red;
+                    padding-left: 4px;
+                    font-weight: 400;
+                    display: none;
+                  "
+                  >Name is required</span
+                >
               </div>
             </div>
             <div class="mb-3">

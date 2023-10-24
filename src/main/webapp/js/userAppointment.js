@@ -1,9 +1,5 @@
 let form = document.getElementById("form_main");
 
-let nameAlert = document.getElementById("nameAlert");
-let nameAlertat = document.getElementById("nameAlertat");
-let nameAlertNumber = document.getElementById("nameAlertNumber");
-
 form.addEventListener("submit", validateForm);
 function validateForm(e) {
   //e.preventDefault();
@@ -12,11 +8,13 @@ function validateForm(e) {
   let name = document.getElementById("fullname").value;
   let email = document.getElementById("email").value;
   let password = document.getElementById("password").value;
+  let age = document.getElementById("age").value;
+  let pno = document.getElementById("pno").value;
 
   // Define regular expressions for validation
   let emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
   let passwordPattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
-
+  let phoneRegex = /^\d{10}$/;
   // Perform validation
   if (name === "") {
     alert("Name is required");
@@ -46,6 +44,12 @@ function validateForm(e) {
     alert(
       "Password must contain at least 8 characters, including one uppercase letter, one lowercase letter, and one number."
     );
+    e.preventDefault();
+    return false;
+  }
+
+  if (age <= 0 && age > 100) {
+    alert("Please provide valid age.");
     e.preventDefault();
     return false;
   }
